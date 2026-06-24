@@ -2,9 +2,9 @@ name: action pipeline
 
 on:
   push:
-    branches: main
+    branches: [ main ]
   pull_request:
-    branches: main
+    branches: [ main ]
 
 
 jobs:
@@ -23,5 +23,7 @@ jobs:
         run: npm ci
 
       - name: run the app
-        run: node app2.js
+        run: |
+          node app2.js
+        curl http://localhost:3000
         
