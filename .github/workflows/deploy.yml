@@ -24,6 +24,7 @@ jobs:
 
       - name: run the app
         run: |
-          node app2.js
-        curl http://localhost:3000
+          node app2.js &
+          sleep 5
+          curl http://localhost:3000
         
